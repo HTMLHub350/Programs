@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programs — HTMLHub350</title>
+  <meta name="description" content="A small gallery of sample programs with search and preview." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <h1 class="brand">Programs</h1>
+      <div class="controls">
+        <label class="search">
+          <input id="searchInput" type="search" placeholder="Search programs..." aria-label="Search programs" />
+        </label>
+        <button id="themeToggle" class="btn" aria-pressed="false" title="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="galleryTitle" class="gallery-section">
+      <h2 id="galleryTitle" class="sr-only">Programs gallery</h2>
+      <div id="cards" class="cards-grid" role="list" aria-live="polite"></div>
+    </section>
+
+    <aside id="preview" class="preview hidden" aria-hidden="true" aria-labelledby="previewTitle" role="region">
+      <div class="preview-header">
+        <h3 id="previewTitle">Preview</h3>
+        <button id="closePreview" class="btn" aria-label="Close preview">✖</button>
+      </div>
+      <div id="previewBody" class="preview-body">
+        <pre><code id="previewCode" class="code-block" tabindex="0"></code></pre>
+      </div>
+      <div class="preview-actions">
+        <button id="copyBtn" class="btn">Copy</button>
+        <a id="downloadLink" class="btn" download="program.txt">Download</a>
+      </div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
