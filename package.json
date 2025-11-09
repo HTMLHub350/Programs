@@ -1,0 +1,19 @@
+{
+  "name": "programs",
+  "version": "1.0.0",
+  "description": "A small gallery of sample programs (HTML, CSS, JS) with a lightweight UI for previewing and downloading snippets.",
+  "main": "index.html",
+  "author": "HTMLHub350",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HTMLHub350/Programs.git"
+  },
+  "scripts": {
+    "start": "npx http-server -c-1 . -p ${PORT:-8080}",
+    "serve": "npm run start"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
