@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>House Shop — Catalog</title>
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --muted:#556069;
+      --accent:#0b61ff;
+      --shadow:0 6px 18px rgba(17,24,39,0.06);
+      --radius:12px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--bg) 92%,black 2%));
+      color:#0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 20px;
+      background:linear-gradient(90deg,#fff,#f1f5f9);
+      border-bottom:1px solid #e6eef8;
+    }
+    .topbar h1{margin:0;font-size:1.1rem;letter-spacing:0.2px}
+    .controls{display:flex;gap:8px;align-items:center}
+    .search{
+      padding:8px 12px;
+      border-radius:10px;
+      border:1px solid #e6eef8;
+      min-width:220px;
+      outline:none;
+      background:transparent;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      gap:12px;
+      padding:14px;
+      max-width:1200px;
+      margin:12px auto;
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:12px;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      min-height:120px;
+    }
+    .card h2{margin:0;font-size:1rem}
+    .card p{margin:0;color:var(--muted);font-size:0.9rem}
+    .meta{display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;color:#475569}
+    .price{font-weight:700;color:var(--accent)}
+    .footer{padding:14px;text-align:center;color:#64748b;font-size:0.9rem}
+    @media (max-width:720px){
+      .topbar{padding:12px}
+      .grid{padding:10px;gap:10px}
+      .search{min-width:140px}
+    }
+  </style>
+
+
+</head>
+<body>
+  <header class="topbar">
+    <h1>House Shop</h1>
+    <div class="controls">
+      <input class="search" placeholder="Search houses..." aria-label="Search houses">
+    </div>
+  </header>
+  <main class="grid" id="catalog">
+<article class="card">
+  <h2>Meadowview Cottage</h2>
+  <p>Cozy cottage with a sunlit kitchen and a quiet garden.</p>
+  <div class="meta"><span class="price">$249,000</span><span>3 bd • 2 ba • 1,120 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Riverside Bungalow</h2>
+  <p>Open plan living with river views and a wooden deck.</p>
+  <div class="meta"><span class="price">$315,000</span><span>4 bd • 2 ba • 1,420 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Oak Terrace</h2>
+  <p>Townhome with modern finishes and easy transport links.</p>
+  <div class="meta"><span class="price">$279,500</span><span>3 bd • 2 ba • 1,250 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harborview Flat</h2>
+  <p>Top-floor flat with panoramic harbor views and balcony.</p>
+  <div class="meta"><span class="price">$399,900</span><span>2 bd • 1 ba • 910 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Sunset Villa</h2>
+  <p>Spacious villa ideal for entertaining with a pool area.</p>
+  <div class="meta"><span class="price">$849,000</span><span>5 bd • 4 ba • 3,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Pinegrove Residence</h2>
+  <p>Serene location surrounded by tall pines and nature trails.</p>
+  <div class="meta"><span class="price">$435,000</span><span>4 bd • 3 ba • 1,760 sqft</span></div>
+</article>
+<article class="card">
+  <h2>City Loft</h2>
+  <p>Industrial-chic loft with exposed brick and high ceilings.</p>
+  <div class="meta"><span class="price">$520,000</span><span>2 bd • 2 ba • 1,300 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Garden Suite</h2>
+  <p>Private suite with direct access to a landscaped courtyard.</p>
+  <div class="meta"><span class="price">$199,000</span><span>1 bd • 1 ba • 650 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Bluebird Cottage</h2>
+  <p>Charming pastel exterior and cozy fireplace in living room.</p>
+  <div class="meta"><span class="price">$225,000</span><span>2 bd • 1 ba • 870 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Stonegate Manor</h2>
+  <p>Historic manor with restored interiors and large grounds.</p>
+  <div class="meta"><span class="price">$1,250,000</span><span>7 bd • 5 ba • 6,800 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Willow End</h2>
+  <p>Riverside property with mature willows and private dock.</p>
+  <div class="meta"><span class="price">$675,000</span><span>4 bd • 3 ba • 2,480 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Cedar Lane House</h2>
+  <p>Family-friendly layout with playroom and fenced yard.</p>
+  <div class="meta"><span class="price">$389,000</span><span>4 bd • 2 ba • 1,980 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Maplebrook Row</h2>
+  <p>Contemporary row house with rooftop terrace and city skyline views.</p>
+  <div class="meta"><span class="price">$445,000</span><span>3 bd • 3 ba • 1,680 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harbor Cottage</h2>
+  <p>Coastal charm and short walk to the marina and cafes.</p>
+  <div class="meta"><span class="price">$372,000</span><span>2 bd • 1 ba • 980 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Silverpine Chalet</h2>
+  <p>Mountain chalet with wood-burning stove and alpine views.</p>
+  <div class="meta"><span class="price">$455,000</span><span>3 bd • 2 ba • 1,430 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hillside Retreat</h2>
+  <p>Elevated home capturing sunrise and long-distance vistas.</p>
+  <div class="meta"><span class="price">$598,000</span><span>4 bd • 3 ba • 2,150 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Elm Street Duplex</h2>
+  <p>Two-unit building ideal for rental income or extended family.</p>
+  <div class="meta"><span class="price">$529,000</span><span>6 bd • 4 ba • 2,900 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Bayfront Terrace</h2>
+  <p>Elegant terrace home with bay windows and sunrise deck.</p>
+  <div class="meta"><span class="price">$679,000</span><span>3 bd • 3 ba • 1,940 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Orchard House</h2>
+  <p>Charming home set among fruit trees and a small orchard.</p>
+  <div class="meta"><span class="price">$312,000</span><span>3 bd • 2 ba • 1,320 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seabreeze Bungalow</h2>
+  <p>Coastal bungalow with breezy interiors and rattan finishes.</p>
+  <div class="meta"><span class="price">$299,500</span><span>2 bd • 1 ba • 860 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Highland Cottage</h2>
+  <p>Stone-clad cottage with sloping roof and alpine landscaping.</p>
+  <div class="meta"><span class="price">$348,000</span><span>3 bd • 2 ba • 1,150 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Brookside Villa</h2>
+  <p>Elegant interiors with French doors opening to a private terrace.</p>
+  <div class="meta"><span class="price">$940,000</span><span>5 bd • 4 ba • 3,050 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadowlands Flat</h2>
+  <p>Compact flat with efficient layout and communal garden access.</p>
+  <div class="meta"><span class="price">$189,000</span><span>1 bd • 1 ba • 520 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hearthstone Cottage</h2>
+  <p>Quaint property featuring a central hearth and exposed beams.</p>
+  <div class="meta"><span class="price">$258,000</span><span>2 bd • 1 ba • 890 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Marigold Row</h2>
+  <p>Colorful facades and a community-focused streetscape.</p>
+  <div class="meta"><span class="price">$309,000</span><span>3 bd • 2 ba • 1,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Willowbrook Estate</h2>
+  <p>Expansive property with stable space and landscaped grounds.</p>
+  <div class="meta"><span class="price">$1,900,000</span><span>8 bd • 6 ba • 9,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seacliff House</h2>
+  <p>Clifftop property with dramatic sea views and terraced garden.</p>
+  <div class="meta"><span class="price">$1,150,000</span><span>5 bd • 4 ba • 3,400 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Elmwood Cottage</h2>
+  <p>Cozy interiors with a dedicated study and built-in shelving.</p>
+  <div class="meta"><span class="price">$274,500</span><span>3 bd • 2 ba • 1,180 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Bayview Duplex</h2>
+  <p>Two-level duplex offering water views from the living areas.</p>
+  <div class="meta"><span class="price">$459,000</span><span>4 bd • 3 ba • 2,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Gardenia Cottage</h2>
+  <p>Flower-filled borders and a sunroom overlooking the garden.</p>
+  <div class="meta"><span class="price">$233,000</span><span>2 bd • 1 ba • 820 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Ridgeview House</h2>
+  <p>Modern home perched on a ridge with panoramic valley views.</p>
+  <div class="meta"><span class="price">$612,000</span><span>4 bd • 3 ba • 2,050 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Pebble Shore</h2>
+  <p>Beach-adjacent property with natural stone landscaping.</p>
+  <div class="meta"><span class="price">$422,000</span><span>3 bd • 2 ba • 1,500 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Copperfield Lodge</h2>
+  <p>Rustic lodge aesthetic with timber interiors and large hearth.</p>
+  <div class="meta"><span class="price">$582,000</span><span>4 bd • 3 ba • 2,300 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Chestnut Row</h2>
+  <p>Row of terraces with consistent street character and small gardens.</p>
+  <div class="meta"><span class="price">$339,000</span><span>3 bd • 2 ba • 1,360 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seafarer Cottage</h2>
+  <p>Small coastal home with nautical accents and breezy rooms.</p>
+  <div class="meta"><span class="price">$284,000</span><span>2 bd • 1 ba • 940 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Sunridge Villa</h2>
+  <p>Sun-oriented living spaces with wide terraces for outdoor dining.</p>
+  <div class="meta"><span class="price">$725,000</span><span>5 bd • 4 ba • 3,100 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Willowmere House</h2>
+  <p>Waterside location with private mooring and lily pond features.</p>
+  <div class="meta"><span class="price">$995,000</span><span>4 bd • 4 ba • 3,750 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Brookfield Terrace</h2>
+  <p>Contemporary terraces with communal landscaping and bike storage.</p>
+  <div class="meta"><span class="price">$365,000</span><span>3 bd • 2 ba • 1,420 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Redwood Cottage</h2>
+  <p>Timber framing and vaulted ceilings set this cottage apart.</p>
+  <div class="meta"><span class="price">$399,900</span><span>3 bd • 2 ba • 1,510 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harbor Loft</h2>
+  <p>Loft living with open plan kitchen and industrial windows.</p>
+  <div class="meta"><span class="price">$468,000</span><span>2 bd • 2 ba • 1,180 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadowlane Bungalow</h2>
+  <p>Single-level ease with a wrap-around porch and mature hedging.</p>
+  <div class="meta"><span class="price">$269,000</span><span>3 bd • 2 ba • 1,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Clayton House</h2>
+  <p>Well-proportioned rooms and a sun-drenched kitchen.</p>
+  <div class="meta"><span class="price">$412,000</span><span>4 bd • 2 ba • 1,860 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seacliff Flat</h2>
+  <p>Compact flat with coastal breezes and proximity to the promenade.</p>
+  <div class="meta"><span class="price">$215,000</span><span>1 bd • 1 ba • 540 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hawthorn House</h2>
+  <p>Traditional façade with modernized interiors and garden space.</p>
+  <div class="meta"><span class="price">$355,000</span><span>3 bd • 2 ba • 1,340 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Ridgecrest Manor</h2>
+  <p>Grand entrance and sweeping staircases, designed for gatherings.</p>
+  <div class="meta"><span class="price">$1,450,000</span><span>6 bd • 5 ba • 5,600 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Poppyfield Cottage</h2>
+  <p>Bright interiors and cottage garden with seasonal blooms.</p>
+  <div class="meta"><span class="price">$242,000</span><span>2 bd • 1 ba • 780 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Lakeside Lodge</h2>
+  <p>Waterfront lodge with boathouse and lakeside terrace.</p>
+  <div class="meta"><span class="price">$838,000</span><span>5 bd • 4 ba • 3,450 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Chestnut Grove</h2>
+  <p>Quiet cul-de-sac living with access to local greenways.</p>
+  <div class="meta"><span class="price">$399,000</span><span>4 bd • 3 ba • 1,980 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Windermere Flat</h2>
+  <p>Cozy flat with lake-access and communal courtyard.</p>
+  <div class="meta"><span class="price">$198,500</span><span>1 bd • 1 ba • 600 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hillside Cottage</h2>
+  <p>Characterful cottage with terraced garden and orchard views.</p>
+  <div class="meta"><span class="price">$328,000</span><span>3 bd • 2 ba • 1,240 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Mariner's Rest</h2>
+  <p>Coastal retreat with nautical detailing and wrap balcony.</p>
+  <div class="meta"><span class="price">$512,000</span><span>3 bd • 2 ba • 1,720 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hilltop Residence</h2>
+  <p>Expansive living with balconies and panoramic valley outlook.</p>
+  <div class="meta"><span class="price">$770,000</span><span>5 bd • 4 ba • 3,000 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Fernwood House</h2>
+  <p>Garden-oriented layout with conservatory and sunroom.</p>
+  <div class="meta"><span class="price">$349,000</span><span>4 bd • 2 ba • 1,760 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seaside Terrace</h2>
+  <p>Terraced house steps from the beach and coastal path.</p>
+  <div class="meta"><span class="price">$389,500</span><span>3 bd • 2 ba • 1,510 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hearthfield Cottage</h2>
+  <p>Warm interiors with a central fireplace and textured walls.</p>
+  <div class="meta"><span class="price">$271,000</span><span>2 bd • 1 ba • 920 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Stonebridge Villa</h2>
+  <p>Contemporary villa with stone accent walls and open courtyards.</p>
+  <div class="meta"><span class="price">$965,000</span><span>5 bd • 4 ba • 3,350 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadowcroft Flat</h2>
+  <p>Small flat overlooking community green and local shops.</p>
+  <div class="meta"><span class="price">$175,000</span><span>1 bd • 1 ba • 480 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Woodland Retreat</h2>
+  <p>Secluded home nestled among mature woodland and trails.</p>
+  <div class="meta"><span class="price">$498,000</span><span>4 bd • 3 ba • 2,100 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Coral Bay Cottage</h2>
+  <p>Pastel palette interiors and coastal breezes throughout.</p>
+  <div class="meta"><span class="price">$289,000</span><span>2 bd • 1 ba • 880 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harborview Residence</h2>
+  <p>Large windows and terraces capturing morning light and harbor views.</p>
+  <div class="meta"><span class="price">$682,000</span><span>4 bd • 3 ba • 2,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Greenfield House</h2>
+  <p>Practical family home with integrated storage and garage.</p>
+  <div class="meta"><span class="price">$359,000</span><span>3 bd • 2 ba • 1,560 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seabreeze Terrace</h2>
+  <p>Terrace with seaside patios and communal green areas.</p>
+  <div class="meta"><span class="price">$322,000</span><span>3 bd • 2 ba • 1,430 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Larkspur Cottage</h2>
+  <p>Small cottage with a fragrant herb garden and sunny kitchen.</p>
+  <div class="meta"><span class="price">$218,000</span><span>2 bd • 1 ba • 760 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seacliff Mansion</h2>
+  <p>Grand mansion with sweeping terraces and private beach access.</p>
+  <div class="meta"><span class="price">$3,850,000</span><span>10 bd • 8 ba • 12,000 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Elmfield Flat</h2>
+  <p>Functional city flat with easy transport links and compact layout.</p>
+  <div class="meta"><span class="price">$198,000</span><span>1 bd • 1 ba • 560 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Pearl Cottage</h2>
+  <p>Light-filled rooms and coastal-inspired finishes throughout.</p>
+  <div class="meta"><span class="price">$243,500</span><span>2 bd • 1 ba • 900 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Riverside Manor</h2>
+  <p>Prestigious property with landscaped lawns down to the river.</p>
+  <div class="meta"><span class="price">$1,150,000</span><span>6 bd • 5 ba • 5,000 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Oakridge House</h2>
+  <p>Comfortable family layout with an emphasis on natural light.</p>
+  <div class="meta"><span class="price">$362,000</span><span>4 bd • 2 ba • 1,940 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harbourside Lofts</h2>
+  <p>Converted warehouse lofts with high ceilings and flexible spaces.</p>
+  <div class="meta"><span class="price">$429,000</span><span>2 bd • 2 ba • 1,450 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadowbank Villa</h2>
+  <p>Elegant villa with private gardens and mature planting.</p>
+  <div class="meta"><span class="price">$815,000</span><span>5 bd • 4 ba • 3,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Willow End Studio</h2>
+  <p>Compact studio ideal for short-term let or a creative workspace.</p>
+  <div class="meta"><span class="price">$129,000</span><span>Studio • 1 ba • 420 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Glenview House</h2>
+  <p>Quiet neighbourhood residence with family-friendly garden.</p>
+  <div class="meta"><span class="price">$378,000</span><span>4 bd • 3 ba • 1,980 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Sandpiper Cottage</h2>
+  <p>Beachside charm with reclaimed-wood features and coastal palette.</p>
+  <div class="meta"><span class="price">$297,000</span><span>2 bd • 1 ba • 910 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Foxglove Residence</h2>
+  <p>Family home with playroom and enclosed rear garden space.</p>
+  <div class="meta"><span class="price">$341,000</span><span>4 bd • 2 ba • 1,760 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Marina View</h2>
+  <p>Contemporary apartment with marina frontage and balcony views.</p>
+  <div class="meta"><span class="price">$475,000</span><span>3 bd • 2 ba • 1,350 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Pinecrest Cabin</h2>
+  <p>Cozy cabin retreat ideal for weekend getaways and outdoor life.</p>
+  <div class="meta"><span class="price">$199,000</span><span>2 bd • 1 ba • 680 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Riverview Terrace</h2>
+  <p>Town terrace overlooking the river with private mooring options.</p>
+  <div class="meta"><span class="price">$468,000</span><span>3 bd • 2 ba • 1,590 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Oak Hollow</h2>
+  <p>Character home with original features sympathetically restored.</p>
+  <div class="meta"><span class="price">$398,000</span><span>4 bd • 2 ba • 1,840 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seabreeze Maisonette</h2>
+  <p>Split-level maisonette with private entrance and roof terrace.</p>
+  <div class="meta"><span class="price">$332,000</span><span>2 bd • 2 ba • 1,020 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hollybrook Cottage</h2>
+  <p>Traditional cottage with exposed beam ceilings and stone floors.</p>
+  <div class="meta"><span class="price">$265,000</span><span>2 bd • 1 ba • 840 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Sunrise Retreat</h2>
+  <p>East-facing property designed to capture morning light and warmth.</p>
+  <div class="meta"><span class="price">$589,000</span><span>4 bd • 3 ba • 2,300 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harborview Cottage</h2>
+  <p>Cottage with nautical charm and close proximity to the pier.</p>
+  <div class="meta"><span class="price">$278,000</span><span>2 bd • 1 ba • 860 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Lavender Row</h2>
+  <p>Row properties lined with lavender and low-maintenance front gardens.</p>
+  <div class="meta"><span class="price">$299,000</span><span>3 bd • 2 ba • 1,300 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hillsborough Manor</h2>
+  <p>Impressive period property with grand reception rooms and grounds.</p>
+  <div class="meta"><span class="price">$2,150,000</span><span>9 bd • 7 ba • 10,500 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Ridgeview Flat</h2>
+  <p>Apartment with balcony and distant mountain views.</p>
+  <div class="meta"><span class="price">$248,000</span><span>2 bd • 1 ba • 800 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadow Park Cottage</h2>
+  <p>Small cottage adjacent to parkland and children's play area.</p>
+  <div class="meta"><span class="price">$223,000</span><span>2 bd • 1 ba • 800 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seaborn Residence</h2>
+  <p>Designer finishes and private marina access for boat owners.</p>
+  <div class="meta"><span class="price">$1,225,000</span><span>5 bd • 4 ba • 3,840 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Fernlea Cottage</h2>
+  <p>Renovated cottage with contemporary kitchen and farmhouse touches.</p>
+  <div class="meta"><span class="price">$268,000</span><span>3 bd • 2 ba • 1,140 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harborview Row</h2>
+  <p>Row houses with coordinated facades and shared walkway to the quayside.</p>
+  <div class="meta"><span class="price">$389,000</span><span>3 bd • 2 ba • 1,450 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Blue Haven</h2>
+  <p>Modern seaside house with large glazing and rooftop terrace.</p>
+  <div class="meta"><span class="price">$692,000</span><span>4 bd • 3 ba • 2,600 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hearthfield House</h2>
+  <p>Classic family house with updated kitchen and utility room.</p>
+  <div class="meta"><span class="price">$386,000</span><span>4 bd • 2 ba • 1,760 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Rosebank Cottage</h2>
+  <p>Cottage with mature rose borders and private courtyard seating.</p>
+  <div class="meta"><span class="price">$239,000</span><span>2 bd • 1 ba • 820 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Clifftop Residence</h2>
+  <p>Architect-designed residence with glass walls and coastal outlook.</p>
+  <div class="meta"><span class="price">$1,975,000</span><span>6 bd • 5 ba • 5,400 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Pine Hollow Cottage</h2>
+  <p>Secluded cottage surrounded by native shrubbery and pine trees.</p>
+  <div class="meta"><span class="price">$264,000</span><span>2 bd • 1 ba • 760 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadowview Residence</h2>
+  <p>Contemporary family home with flexible living spaces and garden.</p>
+  <div class="meta"><span class="price">$412,500</span><span>4 bd • 3 ba • 2,050 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harborfront Flat</h2>
+  <p>Modern flat with marina access and communal roof terrace.</p>
+  <div class="meta"><span class="price">$499,000</span><span>2 bd • 2 ba • 1,120 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Woodside Cottage</h2>
+  <p>Warm timber interiors and an intimate garden setting.</p>
+  <div class="meta"><span class="price">$279,000</span><span>3 bd • 2 ba • 1,150 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seaspray Bungalow</h2>
+  <p>Single-level bungalow offering relaxed coastal living.</p>
+  <div class="meta"><span class="price">$305,000</span><span>3 bd • 2 ba • 1,220 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Riverside Studio</h2>
+  <p>Studio apartment with serene river views and compact plan.</p>
+  <div class="meta"><span class="price">$142,000</span><span>Studio • 1 ba • 380 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Orchard Villa</h2>
+  <p>Elegant villa with orchard and summerhouse for entertaining.</p>
+  <div class="meta"><span class="price">$899,000</span><span>5 bd • 4 ba • 3,600 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Hillside Flat</h2>
+  <p>Compact flat with sloping roofline and attic storage.</p>
+  <div class="meta"><span class="price">$210,000</span><span>2 bd • 1 ba • 740 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadowbank Residence</h2>
+  <p>Family home with flexible study and low-maintenance garden.</p>
+  <div class="meta"><span class="price">$372,000</span><span>4 bd • 2 ba • 1,860 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harborview Cottage II</h2>
+  <p>Coastal cottage in a sheltered bay with friendly community feel.</p>
+  <div class="meta"><span class="price">$291,000</span><span>2 bd • 1 ba • 920 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Stonemill House</h2>
+  <p>Converted mill with character features and vaulted ceilings.</p>
+  <div class="meta"><span class="price">$612,000</span><span>4 bd • 3 ba • 2,420 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Bluewater Villa</h2>
+  <p>Luxury villa with private infinity pool and ocean vistas.</p>
+  <div class="meta"><span class="price">$2,350,000</span><span>6 bd • 6 ba • 7,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Gable End Cottage</h2>
+  <p>Picturesque cottage with gabled rooflines and cottage garden.</p>
+  <div class="meta"><span class="price">$258,500</span><span>3 bd • 1 ba • 940 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harborfront House</h2>
+  <p>Elegant waterfront house with private quay and boathouse.</p>
+  <div class="meta"><span class="price">$1,075,000</span><span>5 bd • 4 ba • 4,100 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Willow Bank</h2>
+  <p>Quiet street with well-proportioned rooms and generous garden.</p>
+  <div class="meta"><span class="price">$368,000</span><span>4 bd • 2 ba • 1,900 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seacliff Studio</h2>
+  <p>Compact seaside studio ideal as a pied-à-terre or rental.</p>
+  <div class="meta"><span class="price">$132,000</span><span>Studio • 1 ba • 360 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadowview Farmhouse</h2>
+  <p>Classic farmhouse with outbuildings and productive land.</p>
+  <div class="meta"><span class="price">$725,000</span><span>5 bd • 3 ba • 3,200 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harbor Lane Terrace</h2>
+  <p>Terraced houses with coordinated frontages close to the quay.</p>
+  <div class="meta"><span class="price">$341,000</span><span>3 bd • 2 ba • 1,450 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Maple House</h2>
+  <p>Well-equipped kitchen and airy living spaces suit family life.</p>
+  <div class="meta"><span class="price">$349,900</span><span>4 bd • 2 ba • 1,820 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seaborn Cottage</h2>
+  <p>Cottage with easy beach access and coastal planting scheme.</p>
+  <div class="meta"><span class="price">$293,000</span><span>2 bd • 1 ba • 880 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Holloway House</h2>
+  <p>Period detailing and a flexible loft space for an office or studio.</p>
+  <div class="meta"><span class="price">$432,000</span><span>4 bd • 2 ba • 2,000 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Meadowgate Flat</h2>
+  <p>Modern flat close to shops and transport with communal gardens.</p>
+  <div class="meta"><span class="price">$205,000</span><span>2 bd • 1 ba • 720 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Harborview Cottage III</h2>
+  <p>Coastal charm with a compact but well-designed interior plan.</p>
+  <div class="meta"><span class="price">$269,900</span><span>2 bd • 1 ba • 860 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Riverside Residence II</h2>
+  <p>Modernized residence with river-facing reception spaces.</p>
+  <div class="meta"><span class="price">$698,000</span><span>5 bd • 4 ba • 3,000 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Pinewind Cottage</h2>
+  <p>Forest-edge property with timber decking and outdoor living areas.</p>
+  <div class="meta"><span class="price">$315,000</span><span>3 bd • 2 ba • 1,320 sqft</span></div>
+</article>
+<article class="card">
+  <h2>Seaview House</h2>
+  <p>Coastal residence with glazed elevations and sweeping terraces.</p>
+  <div class="meta"><span class="price">$1,120,000</span><span>5 bd • 4 ba • 3,500 sqft</span></div>
+</article>
+  </main>
+  <script>
+    (function(){
+      const catalog = document.getElementById('catalog');
+      const search = document.querySelector('.search');
+      function normalize(s){return String(s || '').toLowerCase();}
+      search.addEventListener('input', function(){
+        const q = normalize(this.value.trim());
+        const cards = catalog.querySelectorAll('.card');
+        cards.forEach(card=>{
+          const text = normalize(card.textContent);
+          card.style.display = q === '' || text.indexOf(q) !== -1 ? '' : 'none';
+        });
+      });
+    })();
+  </script>
+  <footer class="footer">House Shop — a static catalog demo for the Programs repository</footer>
+</body>
+</html>
